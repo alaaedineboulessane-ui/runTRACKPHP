@@ -1,22 +1,11 @@
 <?php
 
 
-function test() {
-    echo "test";
+function affiche() {
+    echo "Hello La plateforme";
 }
 
-function valeur() {
-    return 5;
-}
-
-echo valeur();
-
-if(!empty($_GET["mdp"]) && !empty($_GET["nom"])){
-     foreach ($_GET as $key => $value) {
-         echo "<p>".$key . ": ". $value."</p>" ;
-     }
- }
-
+affiche();
 
 ?>
 <!DOCTYPE html>

@@ -1,24 +1,24 @@
 <?php
 
 
-function test() {
-    echo "test";
+function bonjour($jour) {
+    if ($jour == true) {
+        echo "Bonjour";
+    }
+    else {
+        echo "Bonsoir";
+    }
 }
 
-function valeur() {
-    return 5;
-}
 
-echo valeur();
-
-if(!empty($_GET["mdp"]) && !empty($_GET["nom"])){
-     foreach ($_GET as $key => $value) {
-         echo "<p>".$key . ": ". $value."</p>" ;
-     }
- }
+bonjour(true)
+bonjour(false)
 
 
 ?>
+
+
+
 <!DOCTYPE html>
 <html lang="en">
 <head>

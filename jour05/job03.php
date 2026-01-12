@@ -1,24 +1,16 @@
 <?php
 
 
-function test() {
-    echo "test";
+function gethello() {
+    return "Hello La Plateforme"
 }
 
-function valeur() {
-    return 5;
-}
-
-echo valeur();
-
-if(!empty($_GET["mdp"]) && !empty($_GET["nom"])){
-     foreach ($_GET as $key => $value) {
-         echo "<p>".$key . ": ". $value."</p>" ;
-     }
- }
-
+echo gethello()
 
 ?>
+
+
+
 <!DOCTYPE html>
 <html lang="en">
 <head>

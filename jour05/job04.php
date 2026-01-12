@@ -1,24 +1,32 @@
 <?php
 
 
-function test() {
-    echo "test";
+function calcule($num1, $num2, $num3) {
+    if ($num2 == "+") {
+        return $num1 + $num3;
+    }
+    elseif ($num2 == "-") {
+        return $num1 - $num3;
+    }
+    elseif ($num2 == "*") {
+        return $num1 * $num3;
+    }
+    elseif ($num2 == "/") {
+        return $num1 / $num3;
+    }
+    elseif ($num2 == "%") {
+        return $num1 % $num2
+    }
+    else {
+        return "Signe non reconnu"
+    }
 }
 
-function valeur() {
-    return 5;
-}
-
-echo valeur();
-
-if(!empty($_GET["mdp"]) && !empty($_GET["nom"])){
-     foreach ($_GET as $key => $value) {
-         echo "<p>".$key . ": ". $value."</p>" ;
-     }
- }
-
-
+calcule(1,"*",3)
 ?>
+
+
+
 <!DOCTYPE html>
 <html lang="en">
 <head>

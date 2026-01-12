@@ -1,24 +1,22 @@
 <?php
 
 
-function test() {
-    echo "test";
+function occurences($str, $char) {
+    $ind = 0;
+    for ($i = 0; $i <= strlen($char); $i++) {
+        if ($char[i] == $str) {
+            $ind = $ind + 1;
+        }
+    }
+    return $ind;
 }
 
-function valeur() {
-    return 5;
-}
-
-echo valeur();
-
-if(!empty($_GET["mdp"]) && !empty($_GET["nom"])){
-     foreach ($_GET as $key => $value) {
-         echo "<p>".$key . ": ". $value."</p>" ;
-     }
- }
-
+echo occurences("o","bonjour")
 
 ?>
+
+
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
