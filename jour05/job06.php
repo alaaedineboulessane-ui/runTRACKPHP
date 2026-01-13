@@ -29,6 +29,9 @@ function leet($char) {
         elseif (strtolower($char[$i]) == $abc[7]) {
             $res.$lib[7];
         }
+        else {
+            $res.$char[i]
+        }
     }
     return $res;
 }
