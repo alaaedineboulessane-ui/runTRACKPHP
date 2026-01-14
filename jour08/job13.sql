@@ -1,0 +1,1 @@
+SELECT avg(capacite) from salle
