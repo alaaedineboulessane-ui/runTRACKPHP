@@ -1,0 +1,31 @@
+h1 {
+    text-align: center;
+    background-color: black;
+    border: 2px solid white;
+    border-radius: 50px;
+    color: white;
+    padding: 10px; 
+    margin-bottom: 100px;
+
+}
+
+body {
+    background-image: url("https://images.wallpapersden.com/image/download/jojo-s-bizarre-adventure-stardust-crusaders_a2tobG6UmZqaraWkpJRmbmdlrWZlbWU.jpg");
+    background-size: cover;
+    background-attachment: flex; 
+    background-repeat: no-repeat;
+}
+
+section p {
+    background-image: url("https://wallpapercave.com/wp/wp7207979.jpg");
+    background-size: cover;
+    background-attachment: flex; 
+    background-position: center;
+    background-repeat: no-repeat;
+    width : 1200px;
+    height : 300px;
+    border: 10px solid black;
+    border-radius: 200px;
+    margin-top: 200px;
+    margin: auto;
+}
