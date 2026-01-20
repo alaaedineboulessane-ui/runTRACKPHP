@@ -12,6 +12,6 @@ if (!isset($_SESSION['user'])) {
 
 <a href="edit.php">Modifier le profil</a><br>
 <a href="delete.php">Supprimer le profil</a><br>
-<a href="logout.php">Déconnexion</a>
+<a href="logout.php">Déconnexionsss</a>
 
 <?php include 'includes/footer.php'; ?>
