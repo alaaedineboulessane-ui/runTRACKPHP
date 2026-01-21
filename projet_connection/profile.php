@@ -8,6 +8,8 @@ if (!isset($_SESSION['user'])) {
 }
 ?>
 
+
+
 <h1>Bienvenue <?= $_SESSION['user']['username'] ?> !!</h1>
 
 <a href="edit.php">Modifier le profil</a><br>

@@ -23,10 +23,14 @@ if (!empty($_POST)) {
 
 
 <form method="post">
-    <input type="text" name="username" placeholder="Identifiant">
-
-    <input type="password" name="password" placeholder="Mot de passe">
-    <button>Connexion</button>
+    <div>
+        <label>
+            <p>Informations de connexion</p>
+            <input type="text" name="username" placeholder="Identifiant">
+            <input type="password" name="password" placeholder="Mot de passe">
+        </label>
+        <button type="submit">Inscription</button>
+    </div>
 </form>
 
 <?php include 'includes/footer.php'; ?>

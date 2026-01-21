@@ -27,7 +27,6 @@ if (!empty($_POST)) {
 }
 ?>
 
-<link href="./registre.css" rel="stylesheet">
 <div id="jojo1"></div>
 <div id="presentation">
     <h3>Ceci est un site affichant les différentes informations sur le manga et dessin animé JoJo's Bizarre Adventure, veuillez vous inscrire ou vous connecter pour accèder.</h3>
@@ -47,5 +46,7 @@ if (!empty($_POST)) {
         <button type="submit">Inscription</button>
     </div>
 </form>
+<div style="width:1200px; height:300px; background-image:url('https://wallpapercave.com/wp/wp3989500.jpg'); background-size:cover; background-position:top; background-repeat:no-repeat; margin: auto; margin-top: 100px; border-radius: 200px; border: 10px solid black">
+</div></div>
 
 <?php include 'includes/footer.php'; ?>

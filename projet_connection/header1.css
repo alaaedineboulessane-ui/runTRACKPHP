@@ -16,7 +16,7 @@ body {
     background-repeat: no-repeat;
 }
 
-section p {
+section{
     background-image: url("https://wallpapercave.com/wp/wp7207979.jpg");
     background-size: cover;
     background-attachment: flex; 
@@ -26,6 +26,6 @@ section p {
     height : 300px;
     border: 10px solid black;
     border-radius: 200px;
-    margin-top: 200px;
-    margin: auto;
+    margin: auto;   
 }
+
