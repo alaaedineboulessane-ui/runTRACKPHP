@@ -1,0 +1,17 @@
+main h2{
+    background-color: white;
+    width: 220px;
+    margin: auto;
+    margin-top: 50px;
+    border: 2px solid black;
+    justify-content: center;
+    text-align: center;
+}
+
+body {
+    background-image: url("https://images8.alphacoders.com/966/966117.jpg");
+}
+
+footer div{
+    background-image: url("https://www.hdwallpapers.in/download/jojo_giorno_giovanna_with_a_mask_wearing_man_4k_8k_hd_anime-HD.jpg");
+}

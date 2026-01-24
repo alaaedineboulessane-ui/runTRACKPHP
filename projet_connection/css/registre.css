@@ -1,0 +1,53 @@
+form{
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    text-align: center;
+    margin-top: 100px;
+    font-size: larger;
+    margin-bottom: 200px;
+}
+
+
+#jojo1{
+    background-image: url("https://cdnb.artstation.com/p/assets/images/images/070/859/297/large/rusliyt-sbr-2.jpg?1703758316");
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 300px;
+    width: 1200px;
+    border: 10px solid black;
+    border-radius: 500px;
+    margin: auto;
+    box-shadow: 5px 5px 15px rgba(0,0,0,0.5);
+}
+
+#jojo2{
+    background-image: url("https://cdnb.artstation.com/p/assets/images/images/070/859/297/large/rusliyt-sbr-2.jpg?1703758316");
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 300px;
+    width: 1200px;
+    border: 10px solid black;
+    border-radius: 500px;
+    margin: auto;
+    box-shadow: 5px 5px 15px rgba(0,0,0,0.5);
+}
+
+p{
+    background-color: black;
+    color: white;
+    border-radius: 5px;
+    border: 2px solid white;
+    width: 300px;
+    margin: 20px auto;
+}
+
+div h3{
+    text-align: center;
+    color: white;
+    background-color: black;
+    width: 700px;
+    margin: 50px auto 0;
+    border: 2px solid white;
+    border-radius: 50px;
+}
