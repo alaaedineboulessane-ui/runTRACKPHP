@@ -9,7 +9,7 @@ if (!isset($_SESSION['user'])) {
 ?>
 
 
-<link href = "./profile.css" rel ="stylesheet"> 
+<link href = "../css/profile.css" rel ="stylesheet"> 
 <h1>Bienvenue <?= $_SESSION['user']['username'] ?> !!</h1>
 
 <div id = "d">
@@ -18,4 +18,4 @@ if (!isset($_SESSION['user'])) {
 <a class = "lien" href="logout.php">Déconnexion</a>
 </div>
 
-<?php include 'includes/footer.php'; ?>
+<?php include '../includes/footer.php'; ?>

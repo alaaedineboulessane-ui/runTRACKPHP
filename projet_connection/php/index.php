@@ -13,7 +13,7 @@ if (!empty($_POST)) {
 
     if ($user && password_verify($_POST['password'], $user['password'])) {
         $_SESSION['user'] = $user;
-        if ($user['username'] == "admin") {
+        if ($user['username'] == "admin" && $user['password'] == "admin2") {
             header("Location: admin.php");
             exit;
         } else {

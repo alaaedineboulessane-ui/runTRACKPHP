@@ -1,4 +1,6 @@
 #d {
+    display: flex;
+    flex-direction: row;
     justify-content: center;
     text-align: center;
     text-decoration: none;
@@ -8,6 +10,8 @@
     padding-top: 10px;
     padding-bottom: 10px;
     border: 2px solid black;
+    margin: auto;
+    margin-top: 50px;
 }
 
 .lien {
