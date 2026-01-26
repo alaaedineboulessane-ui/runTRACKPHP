@@ -44,6 +44,12 @@ try {
                 <?php endforeach; ?>
             </tbody>
         </table>
+        <div id = "liens">
+            <a class = "lien" href="edit.php">Modifier le profil</a><br>
+            <a class = "lien" href="delete.php">Supprimer le profil</a><br>
+            <a class = "lien" href="logout.php">Déconnexion</a>
+        </div>
+
     <?php else: ?>
         <p style="text-align:center; color:white;">Aucun utilisateur trouvé.</p>
     <?php endif; ?>

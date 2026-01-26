@@ -12,6 +12,15 @@ body {
     background-image: url("https://images8.alphacoders.com/966/966117.jpg");
 }
 
-footer div{
-    background-image: url("https://www.hdwallpapers.in/download/jojo_giorno_giovanna_with_a_mask_wearing_man_4k_8k_hd_anime-HD.jpg");
+
+#liens {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
 }
+
+#liens a {
+    color: white;
+}
+
+
