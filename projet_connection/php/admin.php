@@ -1,6 +1,5 @@
 <?php
 include './config.php';
-include '../includes/header.php';
 
 
 if (!isset($_SESSION['user']) || $_SESSION['user']['username'] !== 'admin') {
@@ -17,7 +16,7 @@ try {
     exit;
 }
 ?>
-<link href = "../css/admin.css" rel = "stylesheet">
+<?php include '../includes/header.php'; ?>
 
 <main>
     <h2>Bienvenue dans la page Administrateur</h2>
