@@ -1,20 +1,23 @@
 #nav {
     display: flex;
     flex-direction: row;
-    justify-content: right;
-    gap:40px;
+    justify-content: center;
+    gap: 300px;
+    margin-top: 50px;
 }
 
 #nav a {
     text-decoration: none;
     background-color: black;
     color: white;
-    border: 2px solid white;
-    padding-left: 20px;
-    padding-right: 20px;
+    border: 5px solid white;
+    padding: 10px 20px;
+    display: inline-block;
+    transition: transform 0.2s ease, background-color 0.2s ease;
 }
 
- a:hover {
-    font-size:larger;
-    padding: 10px;
+#nav a:hover {
+    transform: scale(1.2);
+    background-color: #333;
+    border: 6px solid black;
 }
