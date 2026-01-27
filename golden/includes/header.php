@@ -8,9 +8,9 @@
 </head>
 <body>
     <div id="nav">
-        <a href="../accueil.php"><p>Accueil</p></a>
-        <a href="register.php"><p>Inscription</p></a>
-        <a href="index.php"><p>Connexion</p></a>
+        <a href="./php/accueil.php"><p>Accueil</p></a>
+        <a href="./php/register.php"><p>Inscription</p></a>
+        <a href="./php/index.php"><p>Connexion</p></a>
     </div>
 <header>
 </header>
