@@ -15,5 +15,5 @@ try{
     exit;
 }
 ?>
-<?php include '../include/header.php'; ?>
+<?php include '../includes/header.php'; ?>
 <link href="../css/admin.css" rel="stylesheet">
