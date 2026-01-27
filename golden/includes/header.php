@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <title>Golden Book</title>
+    <link href="./css/accueil.css" rel="stylesheet">
 </head>
 <body>
     <div class="nav">
@@ -13,3 +14,4 @@
 <header>
 </header>
 <footer>
+
