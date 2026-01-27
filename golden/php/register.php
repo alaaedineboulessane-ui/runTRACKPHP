@@ -1,6 +1,6 @@
 <?php
-include './configuration.php';
-include '../include/header.php';
+include './config.php';
+include '../includes/header.php';
 
 if (!empty($_POST)) {
     $username = htmlspecialchars($_POST['username']);
