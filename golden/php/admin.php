@@ -1,5 +1,5 @@
 <?php 
-include './configuration.php';
+include './config.php';
 if ( $_SESSION["user"]["username"]  !== 'adminadmin') {
     header("Location: index.php");
     exit;

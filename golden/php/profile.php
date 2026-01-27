@@ -1,5 +1,5 @@
 <?php
-include './configuration.php';
+include './config.php';
 include '../include/header.php';
 
 if (!isset($_SESSION['user'])) {
