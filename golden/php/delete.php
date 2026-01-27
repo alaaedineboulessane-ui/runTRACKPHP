@@ -1,5 +1,5 @@
 <?php
-include './configuration.php';
+include './config.php';
 
 $sql = "DELETE FROM users WHERE id = :id";
 $stmt = $pdo->prepare($sql);
