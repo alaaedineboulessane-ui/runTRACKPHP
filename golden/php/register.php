@@ -27,3 +27,5 @@ if (!empty($_POST)) {
     }
 }
 ?>
+
+<link href="../css/register.css" rel = "stylesheet">

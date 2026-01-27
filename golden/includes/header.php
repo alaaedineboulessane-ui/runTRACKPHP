@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <title>Golden Book</title>
-    <link href="./css/accueil.css" rel="stylesheet">
-    <link href="./css/header.css" rel="stylesheet">
+    <link href="../css/accueil.css" rel="stylesheet">
+    <link href="../css/header.css" rel="stylesheet">
 </head>
 <body>
     <div id="nav">
