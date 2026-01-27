@@ -1,6 +1,6 @@
 <?php
 include './config.php';
-include '../include/header.php';
+include '../includes/header.php';
 
 if (!isset($_SESSION['user'])) {
     header("Location: index.php");
@@ -14,4 +14,4 @@ if (!isset($_SESSION['user'])) {
 <a href="delete.php">Supprimer le profil</a><br>
 <a href="logout.php">Déconnexion</a>
 </div>
-<?php include '../include/footer.php'; ?>
+<?php include '../includes/footer.php'; ?>

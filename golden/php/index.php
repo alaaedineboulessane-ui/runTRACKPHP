@@ -26,4 +26,4 @@ if (!empty($_POST["submit"])) {
 }
 
 ?>
-<?php include '../include/header.php'; ?>
+<?php include '../includes/header.php'; ?>
