@@ -11,4 +11,6 @@ h1 {
     border: 5px solid black;
     margin: auto;
     margin-top: 80px;
+    padding-top: 10px;
+    padding-bottom: 10px;
 }
