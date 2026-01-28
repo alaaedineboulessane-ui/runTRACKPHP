@@ -1,0 +1,56 @@
+#db {
+    display: flex;
+    justify-content: center;
+    margin-top: 100px;
+    gap: 70px;
+}
+h1{
+    width: 400px;
+}
+#db img{
+    border: 2px solid black;
+}
+body {
+    background-image: url("https://wallpapers.com/images/featured/dragon-ball-z-3izrb2kvqsbl3tun.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+form p{
+    font-size: larger;
+    text-align: center;
+    background-color: white;
+    width: 300px;
+    margin: auto;
+    margin-top: 50px;
+    margin-bottom: 50px;
+    padding:10px;
+    border: 5px solid black;
+}
+
+form{
+    text-align: center;
+}
+
+form div{
+    background-color: rgba(255, 255, 255, 0.5);
+    width: 500px;
+    margin: auto;
+    margin-top: 50px;
+    padding: 50px;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    border: 5px solid black;
+    border-radius: 50px;
+}
+
+#avis {
+    height: 200px;
+}
+
+form div h3,h2{
+    text-align: left;
+    margin-bottom: 0px;
+
+}
