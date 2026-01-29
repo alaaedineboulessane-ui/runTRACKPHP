@@ -1,7 +1,7 @@
 <?php
 include './config.php';
-if (!empty($_POST["submit"])) {
 
+if (!empty($_POST["submit"])) {
     $sql = "SELECT * FROM users WHERE username = :username";
     $stmt = $pdo->prepare($sql);
     $stmt->execute([
@@ -13,17 +13,27 @@ if (!empty($_POST["submit"])) {
     if ($user && password_verify($_POST['password'], $user['password'])) {
         $_SESSION['user'] = $user;
         $_SESSION['username'] = $user["username"];
-      
-
-           if($_SESSION["user"]["username"] == "adminadmin" ){
+        if($_SESSION["user"]["username"] === "adminadmin") {
             header("Location: admin.php");
-
-    }else{
-         header("Location: profile.php");
-    }
-
+            exit();
+        } else {
+            header("Location: profile.php");
+            exit();
+        }
+    } else {
+        $error = "Identifiant ou mot de passe incorrect.";
     }
 }
-
 ?>
 <?php include '../includes/header.php'; ?>
+
+
+<form method="post">
+    <p>Informations de connexion</p>
+    <div>
+        <input type="text" name="username" placeholder="Identifiant" required>
+        <input type="password" name="password" placeholder="Mot de passe" required>
+        <input type="submit" name="submit" value="Connexion">
+    </div>
+    <?php if(!empty($error)) echo "<p style='color:red;'>$error</p>"; ?>
+</form>

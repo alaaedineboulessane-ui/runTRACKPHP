@@ -1,0 +1,35 @@
+#avis {
+    width: 200px;
+    margin: 0 auto;
+    color: black;
+    position: relative;
+    display: block;
+    transition: color 0.3s ease, transform 0.3s ease;
+    margin-top: 50px;
+}
+
+#avis::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -4px;
+    width: 0;
+    height: 2px;
+    background: black;
+    transition: width 0.4s ease;
+}
+
+#avis:hover {
+    color: #fcfcfc;
+    transform: translateY(-2px);
+    background-color: black;
+    border: 5px solid white;
+}
+
+#avis:hover::after {
+    width: 100%;
+}
+
+footer a {
+    text-decoration: none;
+}

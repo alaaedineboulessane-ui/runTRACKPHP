@@ -5,14 +5,17 @@
     <title>Golden Book</title>
     <link href="../css/accueil.css" rel="stylesheet">
     <link href="../css/header.css" rel="stylesheet">
+    
 </head>
 <body>
-    <div id="nav">
+
+<header>
+        <nav id="nav">
         <a href="./accueil.php"><p>Accueil</p></a>
         <a href="./register.php"><p>Inscription</p></a>
         <a href="./index.php"><p>Connexion</p></a>
-    </div>
-<header>
+      </nav>
 </header>
-<footer>
+<main>
+
 

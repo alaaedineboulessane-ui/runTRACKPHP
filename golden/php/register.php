@@ -4,9 +4,11 @@ include '../includes/header.php';
 
 if (!empty($_POST)) {
     $username = htmlspecialchars($_POST['username']);
-    $password = $_POST['password'];
+    $password = htmlspecialchars($_POST['password']);
+    $prenom = htmlspecialchars($_POST['prenom']);
+    $nom = htmlspecialchars($_POST['nom']);
 
-    if (empty($username) || empty($password)) {
+    if (empty($username) || empty($password) || empty($nom) || empty($prenom)) {
         echo "Champs obligatoires";
     } elseif (strlen($username) < 3) {
         echo "Nom trop court";
@@ -15,17 +17,38 @@ if (!empty($_POST)) {
     } else {
         $hash = password_hash($password, PASSWORD_DEFAULT);
 
-        $sql = "INSERT INTO users (username, password)
-                VALUES (:username, :password)";
+        $sql = "INSERT INTO users (nom,prenom, username, password)
+                VALUES (:nom, :prenom, :username, :password)";
         $stmt = $pdo->prepare($sql);
         $stmt->execute([
+            ':nom' => $nom,
+            ':prenom' => $prenom,
             ':username' => $username,
             ':password' => $hash
         ]);
+        header("Location: index.php");
+        exit();
 
-        echo "Compte créé";
     }
 }
 ?>
+<link href = "../css/register.css" rel = "stylesheet">
+<form method="post">
+            <p>Informations personnelles</p>
+    <div>
 
-<link href="../css/register.css" rel = "stylesheet">
+        <input type="text" name="nom" placeholder="Nom de famille">
+        <input type="text" name="prenom" placeholder="Prénom">
+    </div>
+
+        <p>Informations de connexion</p>
+    <div>
+        <input type="text" name="username" placeholder="Identifiant">
+        <input type="password" name="password" placeholder="Mot de passe">
+
+        <button type="submit">Inscription</button>
+    </div>
+</form>
+
+
+

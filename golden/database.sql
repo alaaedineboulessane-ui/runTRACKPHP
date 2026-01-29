@@ -1,15 +1,20 @@
 CREATE TABLE users (
     id INT AUTO_INCREMENT PRIMARY KEY,
-    nom VARCHAR(50),
-    prenom VARCHAR(50),
-    username VARCHAR(50),
-    password VARCHAR(255)
-
-);
+    nom VARCHAR(50) NOT NULL,
+    prenom VARCHAR(50) NOT NULL,
+    username VARCHAR(50) NOT NULL UNIQUE,
+    password VARCHAR(255) NOT NULL
+) ENGINE=InnoDB;
 
 CREATE TABLE message (
     id INT AUTO_INCREMENT PRIMARY KEY, 
-    message text,
-    id_user INT,
-    date DATETIME
-);
+    message TEXT NOT NULL,
+    id_user INT NOT NULL,
+    date DATETIME NOT NULL DEFAULT CURRENT_TIMESTAMP,
+
+    INDEX (id_user),
+    CONSTRAINT fk_message_user
+        FOREIGN KEY (id_user)
+        REFERENCES users(id)
+        ON DELETE CASCADE
+) ENGINE=InnoDB;
