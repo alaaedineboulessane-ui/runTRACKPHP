@@ -1,4 +1,21 @@
-<?php include '../includes/header.php'; ?>
+<?php 
+include '../includes/header.php'; 
+$conn = new PDO("mysql:host=localhost;dbname=golden", "root", "");
+
+if (!empty($_POST['message'])) {
+    $id_user = $_SESSION['id']; 
+    $message = $_POST['message'];
+
+    $sql = $conn->prepare("
+        INSERT INTO message (message, id_user, date)
+        VALUES (?, ?, now())
+    ");
+    $sql->execute([$message, $id_user]);
+    header("Location: avis.php");
+    exit;
+}
+?>
+
 <link href = "../css/manga1.css" rel = "stylesheet">
 
 <h1> Dragon Ball Super</h1>
