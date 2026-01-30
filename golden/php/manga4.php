@@ -1,4 +1,27 @@
-<?php include '../includes/header.php'; ?>
+<?php 
+include './config.php';
+include '../includes/header.php'; 
+
+
+if (!empty($_POST['message']) && !empty($_SESSION['id'])) {
+    $id_user = $_SESSION['id']; 
+    $message = $_POST['message'];
+    //$date = date(y-m-d);
+
+    $sql = $pdo->prepare("
+        INSERT INTO message (message, id_user, date)
+        VALUES (?, ?, now())
+    ");
+    $sql->execute([$message, $id_user]);
+    header("Location: avis.php");
+    exit;
+}
+
+if (!isset($_SESSION['id'])) {
+    header("Location: index.php");
+    exit;
+}
+?>
 <link href = "../css/manga1.css" rel = "stylesheet">
 <link href = "../css/manga4.css" rel = "stylesheet">
 
