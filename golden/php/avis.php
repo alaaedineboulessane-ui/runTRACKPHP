@@ -1,5 +1,4 @@
 <?php 
-include "./config.php";
 include "../includes/header.php";
 $conn = new PDO("mysql:host=localhost;dbname=golden", "root", "");
 $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);

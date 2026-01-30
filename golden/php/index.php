@@ -1,6 +1,5 @@
 <?php
-include './config.php';
-
+include '../includes/header.php'; 
 if (!empty($_POST["submit"])) {
     $sql = "SELECT * FROM users WHERE username = :username";
     $stmt = $pdo->prepare($sql);
@@ -25,7 +24,7 @@ if (!empty($_POST["submit"])) {
     }
 }
 ?>
-<?php include '../includes/header.php'; ?>
+
 <link href  = "../css/index.css" rel = "stylesheet">    
 
 <form method="post">

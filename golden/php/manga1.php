@@ -1,6 +1,5 @@
 <?php
 include '../includes/header.php';
-include './config.php';
 
 if (!empty($_POST['commentaire']) && isset($_SESSION['id'])) {
     $message = $_POST['commentaire'];
