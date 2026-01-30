@@ -1,0 +1,49 @@
+#divprofile {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+    text-align: center;
+    background-color: rgba(8, 8, 8, 0.484);
+    width: 200px;
+    border: 5px solid white;
+    margin-top: 70px;
+    padding: 20px;
+    border-radius: 10px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+#divprofile:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(255, 255, 255, 0.3);
+}
+
+.lienprofile {
+    text-decoration: none;
+    color: white;
+    margin-top: 20px;
+    position: relative;
+    font-weight: bold;
+    transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.lienprofile::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -3px;
+    width: 0;
+    height: 2px;
+    background: white;
+    transition: width 0.3s ease;
+}
+
+.lienprofile:hover {
+    color: #ffdd00; 
+    transform: translateY(-2px);
+}
+
+.lienprofile:hover::after {
+    width: 100%;
+}
