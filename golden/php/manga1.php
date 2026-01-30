@@ -1,6 +1,5 @@
-<?php 
-include './config.php';
-include '../includes/header.php'; 
+<?php
+include '../includes/header.php';
 
 
 if (!empty($_POST['message']) && !empty($_SESSION['id'])) {

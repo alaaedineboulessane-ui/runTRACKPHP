@@ -1,7 +1,6 @@
 <?php include '../includes/header.php'; ?>
 <?php
-include './config.php';
-
+include '../includes/header.php'; 
 if (!empty($_POST["submit"])) {
     $sql = "SELECT * FROM users WHERE username = :username";
     $stmt = $pdo->prepare($sql);

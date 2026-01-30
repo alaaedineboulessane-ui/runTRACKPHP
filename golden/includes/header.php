@@ -11,6 +11,7 @@
 <body>
 
 <header>
+    <?php include "./config.php"?>
         <nav id="nav">
         <a href="./accueil.php"><p>Accueil</p></a>
         <?php if (!isset($_SESSION)){
