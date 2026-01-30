@@ -1,5 +1,6 @@
 <?php
 include './config.php';
+include '../includes/header.php';
 
 if (!isset($_SESSION['user'])) {
     header("Location: index.php");
@@ -23,7 +24,11 @@ if (!empty($_POST)) {
 }
 ?>
 
+<link href = "../css/edit.css" rel = "stylesheet">
+<h1>Ici vous pouvez modifier votre nom prénom et Identifiant</h1>
 <form method="post">
+    <input type="text" name="nom" value="<?= $_SESSION['user']['nom'] ?>">
+    <input type="text" name="prenom" value="<?= $_SESSION['user']['prenom'] ?>">
     <input type="text" name="username" value="<?= $_SESSION['user']['username'] ?>">
     <button>Modifier</button>
 </form>

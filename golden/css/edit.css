@@ -1,0 +1,10 @@
+body{
+    background-image: url('https://wallpapers.com/images/hd/anime-scenery-4k-3840-x-2160-gspk0zrexw7k0dsl.jpg');
+    background-size: cover;
+}
+
+form {
+    text-align: center;
+    justify-content: center;
+    margin-top: 100px;
+}

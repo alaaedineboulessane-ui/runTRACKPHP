@@ -1,8 +1,6 @@
-<?php 
-session_start(); // indispensable
-include '../includes/header.php'; 
-var_dump($_SESSION["id"]);
-?>
+<?php include '../includes/header.php'; 
+    include './config.php';?>
+
 <h1>Ceci est un site qui permet de laisser votre avis sur les mangas les plus celèbres !</h1>
 
 <div id = "manga1">

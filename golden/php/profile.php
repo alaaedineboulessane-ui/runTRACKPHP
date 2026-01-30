@@ -8,7 +8,7 @@ if (!isset($_SESSION['user'])) {
 }
 ?>
 
-<h1>Bienvenue <?= $_SESSION['user']['username'] ?> !!</h1>
+<h1>Bienvenue <?= $_SESSION['user']['nom'] ?> !!</h1>
 <div id = "divprofile">
 <a class = "lienprofile" href="edit.php">Modifier le profil</a><br>
 <a class = "lienprofile" href="delete.php">Supprimer le profil</a><br>
