@@ -18,7 +18,10 @@
             echo "<a href = './register.php'> <p>Inscription</p></a>"; }?>
         <?php if (!isset($_SESSION)){
             echo "<a href = './index.php'><p>Connexion</p></a>"; }?>
-      </nav>
+        <?php if (isset($_SESSION)){
+            echo "<a href = './profile.php'><p>Profil</p></a>;";
+        }?>      
+    </nav>
 </header>
 <main>
 

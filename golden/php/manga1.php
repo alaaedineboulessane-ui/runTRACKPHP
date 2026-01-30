@@ -5,7 +5,6 @@ include '../includes/header.php';
 if (!empty($_POST['message']) && !empty($_SESSION['id'])) {
     $id_user = $_SESSION['id']; 
     $message = $_POST['message'];
-    //$date = date(y-m-d);
 
     $sql = $pdo->prepare("
         INSERT INTO message (message, id_user, date)
