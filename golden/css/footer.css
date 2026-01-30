@@ -1,4 +1,4 @@
-#avis {
+#aviss {
     width: 200px;
     margin: 0 auto;
     color: black;
@@ -8,7 +8,7 @@
     margin-top: 50px;
 }
 
-#avis::after {
+#aviss::after {
     content: "";
     position: absolute;
     left: 0;
@@ -19,14 +19,14 @@
     transition: width 0.4s ease;
 }
 
-#avis:hover {
+#aviss:hover {
     color: #fcfcfc;
     transform: translateY(-2px);
     background-color: black;
     border: 5px solid white;
 }
 
-#avis:hover::after {
+#aviss:hover::after {
     width: 100%;
 }
 
