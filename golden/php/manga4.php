@@ -1,4 +1,27 @@
-<?php include '../includes/header.php'; ?>
+<?php 
+include './config.php';
+include '../includes/header.php'; 
+
+
+if (!empty($_POST['message']) && !empty($_SESSION['id'])) {
+    $id_user = $_SESSION['id']; 
+    $message = $_POST['message'];
+    //$date = date(y-m-d);
+
+    $sql = $pdo->prepare("
+        INSERT INTO message (message, id_user, date)
+        VALUES (?, ?, now())
+    ");
+    $sql->execute([$message, $id_user]);
+    header("Location: avis.php");
+    exit;
+}
+
+if (!isset($_SESSION['id'])) {
+    header("Location: index.php");
+    exit;
+}
+?>
 <link href = "../css/manga1.css" rel = "stylesheet">
 <link href = "../css/manga4.css" rel = "stylesheet">
 
@@ -14,11 +37,13 @@
             <p>Laissez votre avis sur la serie animée Naruto</p>
     <div>
         <h2>Votre commentaire</h2>
-        <input id = "username" type="text" name="username" placeholder="Username">
         <h3>Ecrivez votre avis ici, ne vous limitez pas !</h3>
-        <input id = "avis" type="text" name="commentaire">
+        <textarea id = "avis"  name="message" rows="4" cols="50">
+Écrivez votre commentaire ici
+</textarea>
 
-        <button type="submit">Envoyer</button>
+       <!-- <button type="submit">Envoyer</button> -->
+        <input type="submit" name = "submit" value="envoyer">
     </div>
 </form>
 
