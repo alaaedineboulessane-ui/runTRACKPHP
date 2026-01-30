@@ -37,11 +37,13 @@ if (!isset($_SESSION['id'])) {
             <p>Laissez votre avis sur la serie animée Jujutsu Kaisen</p>
     <div>
         <h2>Votre commentaire</h2>
-        <input id = "username" type="text" name="username" placeholder="Username">
         <h3>Ecrivez votre avis ici, ne vous limitez pas !</h3>
-        <input id = "avis" type="text" name="commentaire">
+        <textarea id = "avis"  name="message" rows="4" cols="50">
+Écrivez votre commentaire ici
+</textarea>
 
-        <button type="submit">Envoyer</button>
+       <!-- <button type="submit">Envoyer</button> -->
+        <input type="submit" name = "submit" value="envoyer">
     </div>
 </form>
 
