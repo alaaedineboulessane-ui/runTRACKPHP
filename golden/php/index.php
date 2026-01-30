@@ -1,3 +1,4 @@
+<?php include '../includes/header.php'; ?>
 <?php
 include '../includes/header.php'; 
 if (!empty($_POST["submit"])) {
@@ -8,9 +9,13 @@ if (!empty($_POST["submit"])) {
     ]);
 
     $user = $stmt->fetch(PDO::FETCH_ASSOC);
+     
+
+
 
     if ($user && password_verify($_POST['password'], $user['password'])) {
         $_SESSION['user'] = $user;
+        $_SESSION['id'] = $user['id'];      
         $_SESSION['username'] = $user["username"];
         if($_SESSION["user"]["username"] === "adminadmin") {
             header("Location: admin.php");
@@ -24,6 +29,10 @@ if (!empty($_POST["submit"])) {
     }
 }
 ?>
+
+<?php if (isset($_GET['error'])): ?>
+    <p style="color:red;">Vous devez être connecté pour laisser un avis.</p>
+<?php endif; ?>
 
 <link href  = "../css/index.css" rel = "stylesheet">    
 

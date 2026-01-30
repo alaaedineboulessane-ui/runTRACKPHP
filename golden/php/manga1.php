@@ -1,20 +1,23 @@
 <?php
 include '../includes/header.php';
 
-if (!empty($_POST['commentaire']) && isset($_SESSION['id'])) {
-    $message = $_POST['commentaire'];
-    $id_user = $_SESSION['id'];
 
-    $sql = "INSERT INTO message (commentaire, id_user, date)
-            VALUES (:commentaire, :id_user, NOW())";
+if (!empty($_POST['message']) && !empty($_SESSION['id'])) {
+    $id_user = $_SESSION['id']; 
+    $message = $_POST['message'];
+    //$date = date(y-m-d);
 
-    $stmt = $pdo->prepare($sql);
-    $stmt->execute([
-        ':commentaire' => $message,
-        ':id_user' => $id_user
-    ]);
-
+    $sql = $pdo->prepare("
+        INSERT INTO message (message, id_user, date)
+        VALUES (?, ?, now())
+    ");
+    $sql->execute([$message, $id_user]);
     header("Location: avis.php");
+    exit;
+}
+
+if (!isset($_SESSION['id'])) {
+    header("Location: index.php");
     exit;
 }
 ?>
@@ -34,8 +37,13 @@ if (!empty($_POST['commentaire']) && isset($_SESSION['id'])) {
     <p>Laissez votre avis sur la série animée Dragon Ball Super</p>
     <div>
         <h2>Votre commentaire</h2>
-        <textarea id="avis" name="commentaire" required></textarea>
-        <button type="submit">Envoyer</button>
+        <h3>Ecrivez votre avis ici, ne vous limitez pas !</h3>
+        <textarea id = "avis"  name="message" rows="4" cols="50">
+Écrivez votre commentaire ici
+</textarea>
+
+       <!-- <button type="submit">Envoyer</button> -->
+        <input type="submit" name = "submit" value="envoyer">
     </div>
 </form>
 

@@ -15,6 +15,10 @@ $message = $conn->query("
 <h1>Tous les commentaires</h1>
 
 
+<?php if ($message->rowCount() === 0): ?>
+    <p>Aucun avis pour le moment.</p>
+<?php endif; ?>
+
 <?php foreach ($message as $m): ?>
     <div>
     <div style="border:1px solid #ccc; margin:10px; padding:10px;">
