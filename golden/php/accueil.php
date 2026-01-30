@@ -1,4 +1,6 @@
-<?php include '../includes/header.php'; ?>
+<?php include '../includes/header.php'; 
+    include './config.php';?>
+
 <h1>Ceci est un site qui permet de laisser votre avis sur les mangas les plus celèbres !</h1>
 
 <div id = "manga1">

@@ -16,16 +16,6 @@ $message = $conn->query("
 <h1>Tous les commentaires</h1>
 
 
-
-
-
-
-
-
-
-
-
-
 <?php foreach ($message as $m): ?>
     <div>
     <div style="border:1px solid #ccc; margin:10px; padding:10px;">

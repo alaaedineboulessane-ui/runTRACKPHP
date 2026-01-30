@@ -13,8 +13,10 @@
 <header>
         <nav id="nav">
         <a href="./accueil.php"><p>Accueil</p></a>
-        <a href="./register.php"><p>Inscription</p></a>
-        <a href="./index.php"><p>Connexion</p></a>
+        <?php if (!isset($_SESSION)){
+            echo "<a href = './register.php'> <p>Inscription</p></a>"; }?>
+        <?php if (!isset($_SESSION)){
+            echo "<a href = './index.php'><p>Connexion</p></a>"; }?>
       </nav>
 </header>
 <main>
