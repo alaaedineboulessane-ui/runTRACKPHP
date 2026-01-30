@@ -1,17 +1,24 @@
 <?php 
+include './config.php';
 include '../includes/header.php'; 
-$conn = new PDO("mysql:host=localhost;dbname=golden", "root", "");
 
-if (!empty($_POST['message'])) {
+
+if (!empty($_POST['message']) && !empty($_SESSION['id'])) {
     $id_user = $_SESSION['id']; 
     $message = $_POST['message'];
+    //$date = date(y-m-d);
 
-    $sql = $conn->prepare("
+    $sql = $pdo->prepare("
         INSERT INTO message (message, id_user, date)
         VALUES (?, ?, now())
     ");
     $sql->execute([$message, $id_user]);
     header("Location: avis.php");
+    exit;
+}
+
+if (!isset($_SESSION['id'])) {
+    header("Location: index.php");
     exit;
 }
 ?>
@@ -30,11 +37,13 @@ if (!empty($_POST['message'])) {
             <p>Laissez votre avis sur la serie animée Dragon Ball Super</p>
     <div>
         <h2>Votre commentaire</h2>
-        <input id = "username" type="text" name="username" placeholder="Username">
         <h3>Ecrivez votre avis ici, ne vous limitez pas !</h3>
-        <input id = "avis" type="text" name="commentaire">
+        <textarea id = "avis"  name="message" rows="4" cols="50">
+Écrivez votre commentaire ici
+</textarea>
 
-        <button type="submit">Envoyer</button>
+       <!-- <button type="submit">Envoyer</button> -->
+        <input type="submit" name = "submit" value="envoyer">
     </div>
 </form>
 
