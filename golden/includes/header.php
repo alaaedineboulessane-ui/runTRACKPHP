@@ -5,7 +5,8 @@
     <title>Golden Book</title>
     <link href="../css/accueil.css" rel="stylesheet">
     <link href="../css/header.css" rel="stylesheet">
-    
+    <link href = "../css/profile.css" rel = "stylesheet">
+
 </head>
 <body>
 

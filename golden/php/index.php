@@ -26,7 +26,7 @@ if (!empty($_POST["submit"])) {
 }
 ?>
 <?php include '../includes/header.php'; ?>
-
+<link href  = "../css/index.css" rel = "stylesheet">    
 
 <form method="post">
     <p>Informations de connexion</p>
