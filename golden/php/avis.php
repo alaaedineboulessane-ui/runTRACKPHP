@@ -20,12 +20,13 @@ $message = $conn->query("
 <?php endif; ?>
 
 <?php foreach ($message as $m): ?>
-    <div>
+<div class="avis-box">
     <div style="border:1px solid #ccc; margin:10px; padding:10px;">
         <strong><?= htmlspecialchars($m['username']) ?></strong><br>
         <?= nl2br(htmlspecialchars($m['message'])) ?><br>
         <small><?= $m['date'] ?></small>
     </div>
+</div>
 <?php endforeach; ?>
 
 <?php include "../includes/footer.php" ?>
