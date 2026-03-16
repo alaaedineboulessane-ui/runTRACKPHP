@@ -1,0 +1,18 @@
+h1, p {
+    background-color: black;
+    color: white;
+    text-align: center;
+    margin: auto;
+    width: 500px;
+    border: 2px solid white;
+    border-radius: 5px;
+    margin: 
+}
+
+body {
+    background-image: url("https://cdn.mos.cms.futurecdn.net/4HqNUJmCuMZWVEMk3kdEa.jpg ");
+    background-repeat: no-repeat;
+    background-size: cover;
+
+}
+
