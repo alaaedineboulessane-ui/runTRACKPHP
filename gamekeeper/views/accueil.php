@@ -6,6 +6,9 @@
     <link rel="stylesheet" href="./assets/css/accueil.css">
 </head>
 <body>
+    <div id = "hea">
+        <a href = "./views/register.php">Inscription</a>
+    </div>
     <h1>Bienvenue sur votre collection de jeux !</h1>
     <p>Ici vous pourrez ajouter des jeux à votre collection.</p>
 </body>
