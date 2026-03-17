@@ -1,7 +1,7 @@
 <?php
 class HomeController {
     public function showHome() {
-        require "views/accueil.php"; 
+        require "views/AccueilView.php"; 
     }
 }
 

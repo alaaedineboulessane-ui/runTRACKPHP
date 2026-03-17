@@ -7,13 +7,13 @@
 </head>
 <body>
 <header>
-    <div class="nav">
+    <div id="divdbtn">
         <a class="btn" href="../index.php">Accueil</a>
-        <a class="btn" href="./views/register.php">Inscription</a>
-        <a class="btn" href="index.php">Connexion</a>
+        <a class = "btn"href="index.php?page=register">Inscription</a>
+        <a href="index.php?page=login">Connexion</a>
         <?php
         if (isset($_SESSION["username"])) {
-            echo "<a class='btn' href='../profil.php'>Profil</a>";
+            echo "<a class='btn' href='../profileView.php'>Profil</a>";
         }
         ?>
     </div>

@@ -2,15 +2,18 @@
 require_once __DIR__ . '/../config/config.php';
 
 class UserModel {
+
     private $pdo;
 
     public function __construct() {
-        $this->pdo = new PDO("mysql:host=".DB_HOST.";dbname=".DB_NAME, DB_USER, DB_PASS);
+        global $pdo;
+        $this->pdo = $pdo;
     }
 
     public function register($nom, $prenom, $username, $password) {
         $hash = password_hash($password, PASSWORD_DEFAULT);
-        $sql = "INSERT INTO users (nom, prenom, username, password) VALUES (:nom, :prenom, :username, :password)";
+        $sql = "INSERT INTO users (nom, prenom, username, password)
+                VALUES (:nom, :prenom, :username, :password)";
         $stmt = $this->pdo->prepare($sql);
         return $stmt->execute([
             'nom' => $nom,
@@ -18,5 +21,12 @@ class UserModel {
             'username' => $username,
             'password' => $hash
         ]);
+    }
+
+    public function getUserByUsername($username) {
+        $sql = "SELECT * FROM users WHERE username = :username LIMIT 1";
+        $stmt = $this->pdo->prepare($sql);
+        $stmt->execute(['username' => $username]);
+        return $stmt->fetch(PDO::FETCH_ASSOC);
     }
 }

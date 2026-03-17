@@ -1,6 +1,6 @@
-<?php include '../includes/header.php'; ?>
+<?php include __DIR__ . '/../includes/header.php'; ?>
 
-<?php if(!empty($error)) echo "<p>$error</p>"; ?>
+<?php if(!empty($error)) echo "<p style='color:red;'>$error</p>"; ?>
 
 <form method="post">
     <p>Informations personnelles</p>
@@ -17,4 +17,4 @@
     </div>
 </form>
 
-<?php include '../includes/footer.php'; ?>
+<?php include __DIR__ . '/../includes/footer.php'; ?>
